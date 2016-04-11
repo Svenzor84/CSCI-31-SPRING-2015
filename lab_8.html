@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<!--
+ - Name        : lab_8.html
+ - Author      : Steve Ross-Byers
+ - Description : A form for creating a character for a tabletop RPG
+ -->
+
+<html lang="en-us">
+
+<head>
+    <title> Character Creation </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Steve Ross-Byers" />
+    <meta name="description" content="A form that creates a character for a roleplaying game" />
+    <meta name="keyword" content="character creation, tabletop, roleplaying game" />
+    <link rel="icon" href="shield_and_sword.ico" />
+
+    <!-- compatibility script -->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style>
+        * {
+            margin-bottom: 0.25em;
+        }
+        
+        #character_creation {
+            max-width: 50%;
+        }
+        
+        select {
+            vertical-align: middle;
+        }
+        
+        label[for="password"] {
+            margin-left: 2em
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="character_creation" method="get" action="process_form.html">
+        <fieldset>
+            <legend>Create Your Character</legend>
+
+            <!-- character name and religious affiliation -->
+            <label for="char_name">Name: </label>
+            <input type="text" name="char_name" id="char_name" value="CHARACTER NAME" />
+            <label for="deity">Deity: </label>
+            <input type="text" name="deity" id="deity" maxlength="20" />
+            <hr />
+
+            <!-- character alignment -->
+            <br /> Alignment (one from each column):
+            <br />
+            <input type="radio" name="alignment1" id="lawful" checked="checked" value="Lawful">
+            <label for="lawful">Lawful</label>
+            <input type="radio" name="alignment2" id="good" checked="checked" value="Good">
+            <label for="good">Good</label>
+            <br />
+            <input type="radio" name="alignment1" id="neutral1" value="Neutral">
+            <label for="neutral1">Neutral</label>
+            <input type="radio" name="alignment2" id="neutral2" value="Neutral">
+            <label for="neutral2">Neutral</label>
+            <br />
+            <input type="radio" name="alignment1" id="chaotic" value="Chaotic">
+            <label for="chaotic">Chaotic</label>
+            <input type="radio" name="alignment2" id="evil" value="Evil">
+            <label for="evil">Evil</label>
+            <hr />
+
+            <!-- character bio -->
+            <br />
+            <label for="character_bio">Bio:</label>
+            <br />
+            <textarea name="character_bio" rows="5" cols="60" id="character_bio">TELL US ABOUT YOUR CHARACTER</textarea>
+
+            <!-- character class(es) -->
+            <fieldset>
+                <legend>Class (check multiple to multiclass)</legend>
+                <br />
+                <input type="checkbox" name="class" id="fighter" value="Fighter">
+                <label for="fighter">Fighter</label>
+                <input type="checkbox" name="class" id="wizard" value="Wizard" checked="checked">
+                <label for="wizard">Wizard</label>
+                <input type="checkbox" name="class" id="rogue" value="Rogue">
+                <label for="rogue">Rogue</label>
+                <input type="checkbox" name="class" id="cleric" value="Cleric">
+                <label for="cleric">Cleric</label>
+                <input type="checkbox" name="class" id="ranger" value="Ranger">
+                <label for="ranger">Ranger</label>
+            </fieldset>
+
+            <!-- character starting equipment -->
+            <fieldset>
+                <legend>Equipment</legend>
+                Armor:
+                <select name="armor" size="3">
+                    <option value="Robes">Robes</option>
+                    <option value="Leather Armor">Leather Armor</option>
+                    <option value="Studded Leather">Studded Leather</option>
+                    <option value="Chain Mail">Chain Mail</option>
+                    <option value="Plate Mail">Plate Mail</option>
+                    <option value="Full Plate">Full Plate</option>
+                    <option value="War Plate">War Plate</option>
+                </select>
+                Weapon:
+                <select name="weapon" size="4">
+                    <option value="Short Bow">Short Bow</option>
+                    <option value="Long Bow">Long Bow</option>
+                    <option value="Cudgel">Cudgel</option>
+                    <option value="Mace">Mace</option>
+                    <option value="Warhammer">Warhammer</option>
+                    <option value="Dagger">Dagger</option>
+                    <option value="Short Sword">Short Sword</option>
+                    <option value="Long Sword">Long Sword</option>
+                    <option value="Bastard Sword">Bastard Sword</option>
+                    <option value="Great Sword">Great Sword</option>
+                </select>
+                <br /> Other:
+                <select name="other" size="5" multiple>
+                    <option value="Backpack">Backpack</option>
+                    <option value="Bedroll">Bedroll</option>
+                    <option value="Grappling Hook">Grappling Hook</option>
+                    <option value="Rations">Rations</option>
+                    <option value="Rope">Rope</option>
+                    <option value="Tinderbox">Tinderbox</option>
+                    <option value="Waterskin">Waterskin</option>
+                </select>
+                <br />(hold ctrl to select multiple items)
+            </fieldset>
+
+            <!-- Password entry -->
+            Enter a Password to save your character
+            <br />
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" />
+        </fieldset>
+        <input type="submit" name="submit_button" id="submit_button" />
+        <input type="reset" name="reset_button" id="reset_button" />
+        <button type="button">This Button Does Nothing</button>
+    </form>
+</body>
+
+</html>

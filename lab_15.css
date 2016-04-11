@@ -1,0 +1,104 @@
+/*
+Filename:    lab_15.css
+Description: External CSS Stylesheet for worst FAQ site ever
+Author:      Steve Ross-Byers
+*/
+
+
+/* compatibility*/
+
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+* {
+    margin: 0 auto 0;
+    padding: .25em;
+}
+
+body {
+    background: #664E4C;
+    color: #F0E2A3;
+}
+
+h1,
+h2 {
+    width: 325px;
+    margin-bottom: 1em;
+}
+
+#open {
+    max-width: 81em;
+}
+
+#open,
+.answer {
+    text-indent: 50px;
+}
+
+hr {
+    margin: 1.5em 0;
+}
+
+.q_and_a {
+    border: solid 2pt #C1D37F;
+    margin-bottom: 1.5em;
+    max-width: 750px;
+    min-width: 450px;
+}
+
+.question {
+    text-align: center;
+}
+
+.answer {
+    display: none;
+    color: #E2D58B;
+}
+
+legend {
+    margin: 1.5em;
+}
+
+form {
+    max-width: 900px;
+}
+
+label.notCenter {
+    float: left;
+    width: 5em;
+    text-align: right;
+}
+
+input,
+textarea {
+    margin-left: 1em;
+    margin-bottom: .5em;
+    background: #C1D37F;
+    border: none;
+    padding: .75em;
+}
+
+textarea {
+    background: #666666;
+}
+
+#stars {
+    text-align: center;
+}
+
+.floatRight {
+    float: right;
+    margin-right: 1em;
+}
+
+#hideAndShow {
+    text-align: center;
+}

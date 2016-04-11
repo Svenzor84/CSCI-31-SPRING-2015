@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+- Filename: 	  lab_10.html
+- Description: 	A MadLib Using JavaScript
+- Author: 		  Luke Sathrum / YOUR NAME HERE
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Fun with MadLibs</title>
+		<style>
+            section {
+                background: #CCCCCC;
+                height: 100%;
+                max-width: 700px;
+                padding: 5em;
+                margin: 0 auto;
+            }
+            
+			h1 {
+                background: #FFA500;
+                border: solid 2pt #000000;
+                width: 275px;
+                margin: 0 auto;
+                padding: .5em;
+                text-align: center;
+                
+            }
+            
+            p {
+                text-indent: 25px;
+                background: #000000;
+                color: #CCCCCC;
+                padding: 1.25em .5em;
+                width: 500px;
+                margin: .5em auto;
+            }
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>A Scary Halloween Story</h1>
+			<script>
+				// Get the answers
+				var adj_1 = prompt("Adjective #1");
+                var adj_2 = prompt("Adjective #2");
+                var adj_3 = prompt("Adjective #3");
+                var adj_4 = prompt("Adjective #4");
+                var adv_1 = prompt("Adverb #1");
+                var adv_2 = prompt("Adverb #2");
+				var noun_1 = prompt("Noun #1");
+                var noun_2 = prompt("Noun #2");
+                var noun_3 = prompt("Noun #3");
+                var noun_4 = prompt("Noun #4");
+                var noun_5 = prompt("Noun #5");
+                var verb_1 = prompt("Verb #1 (past tense)");
+                var verb_2 = prompt("Verb #2 (past tense)");
+                var verb_3 = prompt("Verb #3 (present tense)");
+                var verb_4 = prompt("Verb #4 (present tense)");
+                var verb_5 = prompt("Verb #5 (present tense)");
+				
+				// Display the answers
+				document.write("<p>One " + adj_1 + " day I was " + verb_4 + "ing " + adv_1 + " down the street when a " + adj_2 + " " + noun_1 + " crossed my path.</p>");
+                document.write("<p>Being that it was almost Halloween, I " + verb_1 + " right out of my " + noun_2 + "!</p>");
+                document.write("<p>Before I could regain my composure, I " + adv_2 + " " + verb_2 + " my " + noun_3 + " and that caused the " + adj_2 + " " + noun_1 + " to " + verb_3 + " away in a hurry.</p>");
+                document.write("<p>After this " + adj_3 + " experience I simply could not continue to " + verb_4 + " anymore, so I decided to " + verb_5 + " instead. This was a huge " + noun_4 + " because I ended up " + verb_5 + "ing directly into a " + adj_4 + " " + noun_5 + ".</p>")
+			</script>
+			<h1>The End!</h1>
+		</section>
+	</body>
+</html>

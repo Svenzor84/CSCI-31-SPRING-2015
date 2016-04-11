@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!--
+ - Name        : lab_13.html
+ - Author      : Steve Ross-Byers
+ - Description : A javascript shopping list
+ -->
+
+<html lang="en-us">
+
+<head>
+    <title> Shopping List </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Steve Ross-Byers" />
+    <meta name="description" content="a dynamic shopping list created with javascript" />
+    <meta name="keyword" content="shopping list" />
+
+    <!-- compatibility script -->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script src="lab_13.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1,
+        form {
+            margin: .5em auto;
+            max-width: 250px;
+            text-align: center;
+        }
+        
+        input {
+            padding: .25em;
+            margin-bottom: .5em;
+            margin-top: .5em;
+        }
+        
+        button {
+            display: block;
+            width: 450px;
+            margin: .25em auto;
+        }
+        
+        table {
+            width: 450px;
+            margin: 0 auto;
+            text-align: center;
+            border: solid 1pt #000000;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: solid 2pt #000000;
+        }
+        
+        th {
+            border: solid 2pt #CECECE;
+            border-bottom: solid 3pt #CECECE;
+            width: 150px;
+            background: #000000;
+            color: #CECECE;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: #BEBEBE;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Shopping List</h1>
+    <form id="form" onsubmit="return processForm(this)">
+        <label for="item">Item: </label>
+        <input type="text" id="item" required="required" />
+        <br />
+        <label for="quantity">Quantity: </label>
+        <input type="number" id="quantity" required="required" min="1" />
+        <br />
+        <label for="bought">Bought?</label>
+        <input type="checkbox" id="bought" />
+        <br />
+        <input type="submit" value="Add Item" />
+    </form>
+    <button type="button" onclick="removeItem('shift')">Remove First Item </button>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Bought?</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+    </table>
+    <button type="button" onclick="removeItem('pop')">Remove Last Item </button>
+</body>
+
+</html>

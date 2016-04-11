@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!--
+ - Name        : template_Steve_Ross-Byers.html
+ - Author      : Steve Ross-Byers
+ - Description : A template for making new web sites
+ -->
+
+<html lang="en-us">
+
+<head>
+    <title> Number Guessing Game </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Steve Ross-Byers" />
+    <meta name="description" content="A number guessing game using javascript" />
+    <meta name="keyword" content="number, javascript, game" />
+    
+    <!-- compatibility script -->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js">     </script>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            margin-bottom: .5em;
+        }
+        
+        form {
+            width: 500px;
+            margin: .5em auto;
+            padding: 1.5em 1em;
+            background: #000000;
+            color: #CECECE;
+            border: #CC6600 solid 5pt;
+            text-align: center;
+        }
+        
+        input {
+            width: 150px;
+            padding: .25em;
+            margin: .5em .5em;
+            text-align: center;
+        }
+        
+        fieldset {
+            text-align: center;
+        }
+        
+        legend {
+            margin: 0em 1em;
+            color: #CC6600;
+        }
+        
+        input[type="submit"] {
+            margin: 1em auto .5em;
+        }
+        
+        input[type="number"] {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="login_form" action="handle_guess.html" method="get">
+        <h1>Try to guess the correct number!!!</h1>
+        <fieldset>
+           <legend><label for="guess">Your Guess</label></legend>
+            <input id="guess" name="guess" type="number" required="required" min="1" max="10" />
+        </fieldset>
+        <input type="submit" name="submit" value="Take A Guess" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+- Filename:		form.html
+- Description:	Class Example of an HTML form
+- Author:		Luke Sathrum
+-->
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>HTML Form Processor</title>
+		<style>
+	      body {
+		    font-size: 200%;
+		  }
+		  table{
+				border-collapse: collapse;	
+		  }
+		  th,
+		  td{
+			padding: .25em 1em;
+			border: 1px solid #000000;
+		  }
+		  thead{
+			border-bottom: 3px solid #000000;
+			background: #000000;
+			color: #FFFFFF;
+		  }
+		  tbody tr:nth-child(even) {
+			background: #EBEBEB;
+		  }
+	    </style>
+		<script type="text/javascript">
+		  function OutputGet(get) {
+		    document.write("<table><thead><tr><th>Form Element Name</th><th>Form Element Value</th></tr></thead><tbody>");
+			Object.keys(get).forEach(function(name) {
+			  document.write("<tr><td>" + name + "</td><td>" + get[name] + "</td></tr>"); 
+			});
+			document.write("</tbody></table>");
+		  }
+		  
+		  if (window.location.search != "") {
+		    var get_string = window.location.search.substr(1).split("&");
+		    var get = {};
+		    for (var i = 0; i < get_string.length; i++) {
+		      var temp = get_string[i].split("=");
+              if (typeof get[decodeURIComponent(temp[0])] == "undefined")
+			    get[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+              else
+                get[decodeURIComponent(temp[0])] = get[decodeURIComponent(temp[0])] + ", " + decodeURIComponent(temp[1]);
+		    }
+		  }
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		  console.log(get);
+		  if (typeof get != "undefined") {
+			OutputGet(get);
+		  } else {
+		    document.write("<h1>No form data to handle</h1>");
+		  }
+		</script><h1>No form data to handle</h1>
+	
+</body></html>

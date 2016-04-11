@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<!--
+ - Name        : lab_9.html
+ - Author      : Steve Ross-Byers
+ - Description : A re-creation of an online form (option 4)
+ -->
+
+<html lang="en-us">
+
+<head>
+
+    <title> Lab 9 | Option 4</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Steve Ross-Byers" />
+    <meta name="description" content="Re-creation of an online login form" />
+    <meta name="keyword" content="login, html5 forms" />
+    <link rel="icon" href="un.png" />
+
+    <!-- compatibility script -->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            color: #8B8A8B;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            margin-bottom: 25em;
+        }
+        
+        form {
+            background: #121317;
+            padding: 4em 1.5em 3.5em;
+            width: 310px;
+            height: 380px;
+            margin: 7.5em auto;
+        }
+        
+        h1 {
+            margin-bottom: 1.85em;
+            font-weight: lighter;
+        }
+        
+        input {
+            padding: 1.2em;
+            font-size: 1.05em;
+            margin: 0em auto 1.65em;
+        }
+        
+        input[type="text"] {
+            background: #18191E;
+            width: 270px;
+            color: #979696;
+            background-repeat: no-repeat;
+            background-position: 95% 50%;
+        }
+        
+        input[name="user_name"] {
+            background-image: url("un.png");
+        }
+        
+        input[name="password"] {
+            background-image: url("pw.png");
+        }
+        
+        input[type="submit"] {
+            background: #D29D41;
+            color: #845724;
+            font-weight: bold;
+            text-align: center;
+            width: 312px;
+        }
+        
+        #new_account {
+            color: #D29D41;
+        }
+        
+        a {
+            font-size: .85em;
+            text-decoration: none;
+            margin-right: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="login_form" action="process_form.html" method="get">
+        <h1>Sign in</h1>
+        <input id="user_name" type="text" placeholder="Arian" name="user_name" />
+        <br />
+        <input id="password" type="text" placeholder="Password" name="password" />
+        <br />
+        <input type="submit" name="submit" value="SIGN IN" />
+        <br />
+        <a href="forgot_password.html">Forgot password?</a>
+        <a href="create_account.html" id="new_account">Create an account</a>
+    </form>
+</body>
+
+</html>

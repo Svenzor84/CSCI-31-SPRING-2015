@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--
+ - Name        : lab_15.html
+ - Author      : Steve Ross-Byers
+ - Description : A collection of the worst FAQ's ever
+ -->
+
+<html lang="en-us">
+
+<head>
+
+    <title> Worst FAQ Site </title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Steve Ross-Byers" />
+    <meta name="description" content="A collection of the worst FAQ's ever" />
+    <meta name="keyword" content="FAQ, terrible, satire" />
+
+    <link rel="stylesheet" href="lab_15.css" type="text/css" />
+    <!-- compatibility script -->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+</head>
+
+<body>
+    <h1>The Worst FAQ's Ever</h1>
+    <p id="open">This site is dedicated to collecting the worst FAQ's ever asked on the internet, and now you can help! Please add the worst FAQ you have encountered to make our list the best...worst...whatever.</p>
+    <hr />
+    <section id="FAQ">
+        <section class="q_and_a">
+            <p class="question">*Why did the chicken cross the road?*</p>
+            <p class="answer">This is a terrible question. How could anyone know the inner workings of the mind of a crazy chicken? Perhaps there were worms on the other side or maybe the grass seemed greener. The most likely answer is that chickens lack the higher brain function required to determine that vehicles are driven on roads and that, thus, roads are dangerous for small animals to cross.</p>
+        </section>
+        <section class="q_and_a">
+            <p class="question">*How much wood would a woodchuck chuck?*</p>
+            <p class="answer">Another horrible question. Of course, any animal is going to perform the activity for which it is named as much as possible. Otherwise, why would we have named the creature thusly? A more detailed version of this question involves the ability of the aforementioned woodland creature to do what its name implies is a vital part of its existence, and it is in that version of the question we can see the truely inept nature of this question. The woodchuck can chuck wood, and he does it a lot.</p>
+        </section>
+        <section class="q_and_a">
+            <p class="question">*Who are you?*</p>
+            <p class="answer">This question is a little tricky, and one might consider that this is not a terrible question to be asked on a regular basis, given that a person's name can be pertinent information if it is not common knowledge. The case in which this question becomes a bad one is in the case of the song "Who Are You?" by English rock opera group The Who. In the song, singer Roger Daltry asks this question roughly 27 times, not including the repeatition of the word "Who" throughout. In this context the question is utterly ridiculous because there is no way for the listener to respond! How does the group expect an answer to a question, asked often and occasionally accompanied by an explative, from a mute audience?</p>
+        </section>
+    </section>
+    <section id="hideAndShow">
+        <input type="button" value="Hide All Questions" id="hideAll">
+        <input type="button" value="Show All Questions" id="showAll">
+    </section>
+    <hr />
+    <form id="FAQForm">
+        <fieldset>
+            <legend>Add Your Own FAQ</legend>
+            <label for="qAdd" class="notCenter">Question: </label>
+            <textarea id="qAdd" cols=100 rows=2 placeholder="Enter your question text here.  Webmasters will remove any question deemed rational or reasonable." required="required"></textarea>
+            <label for="aAdd" class="notCenter">Answer: </label>
+            <textarea id="aAdd" cols=100 rows=5 placeholder="Enter your answer text here.  Answers should be unnecessarily verbose." required="required"></textarea>
+            <section id="stars">
+                <p>Did you add stars to the beginning and end of your question? (be honest, please)</p>
+                <label for="yes">Yup</label>
+                <input type="radio" name="stars" id="yes" value="yes">
+                <label for="no">Nope</label>
+                <input type="radio" name="stars" id="no" value="no" checked="checked">
+            </section>
+            <input type="submit" value="Add FAQ">
+            <input type="reset" value="Start Over" class="floatRight">
+        </fieldset>
+    </form>
+    <script src="lab_15.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+/*
+ * Filename: 	    lab_17.css
+ * Description: 	style sheet for memory tile game
+ * Author:          Luke Sathrum / Steve Ross-Byers
+ */
+
+.front {
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+    height: 100px;
+    width: 100px;
+}
+
+.back {
+    position: absolute;
+    z-index: 0;
+    height: 100px;
+    width: 100px;
+    left: 50px
+}
+
+.tile-container {
+    margin-top: 33px;
+    width: 100px;
+    height: 100px;
+    right: 50px;
+    position: relative;
+}
+
+h1,
+#memory {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#memory {
+    height: 500px;
+}
